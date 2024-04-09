@@ -1,0 +1,44 @@
+@keyframes Animslid {
+    from {
+        transform: translatey(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translatey(0);
+        opacity: 1;
+      }    
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(360deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes showHome {
+  0% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 10000;
+  }
+}
+
+
+
+
+
+
+
+
+
+

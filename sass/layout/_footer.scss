@@ -1,0 +1,75 @@
+@use "../utils/mixins" as *;
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    padding: 22px 25px;
+    gap: 10px;
+
+    @include breakpoint(desktop) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 30px 25px;
+        
+    }
+
+    &__title {
+        color: white;
+        font-family: 'Shrikhand', serif;
+        font-weight: 200;
+
+        @include breakpoint(desktop) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-size: 16px;
+            font-weight: 200;
+        }
+    }
+
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+
+    &__list {
+        list-style: none;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        color: white;
+        gap: 7px;
+
+        @include breakpoint(desktop) {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 16px;
+            margin-right: 40px;
+            padding: 0;
+        }
+
+        & i {
+            color: white;
+            margin-right: 15px;
+            width: 11px;
+            height: 13px;
+        }
+    
+    
+        &--listicon {
+            display: inline-flex;
+            font-weight: bold;
+            color: white;
+        }
+
+    }
+
+}
+
+
+

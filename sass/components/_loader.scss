@@ -1,0 +1,65 @@
+@use "../utils/keyframes" as *;
+@use "../utils/variables" as *;
+
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(white, 0.75);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    
+
+    &__contain {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        vertical-align: middle;
+        position: relative;
+        border-radius: 80px;
+        border: 4px solid transparent;
+        border-top-color: #9356DC;
+        animation: loader 1s linear 1.1s both;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            bottom: 8px;
+            right: 8px;
+            border-radius: 50px;
+            border: 4px solid transparent;
+            border-top-color: #FF79DA;
+            opacity: 0.8;
+            animation: loader 1.5s linear 600ms;
+            
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50px;
+            border: 4px solid transparent;
+            border-top-color: #99E2D0;
+            opacity: 0.5;
+            animation: loader 2s linear 100ms;
+        }
+
+    }
+
+}
+
+ 
+
+
+

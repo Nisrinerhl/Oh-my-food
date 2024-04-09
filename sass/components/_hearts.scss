@@ -1,0 +1,79 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.heart {
+    font-size: 22px;
+    position: relative;
+    
+    &__uncheck,
+    &__check {
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+        transform: translate(-50%, -50%);
+        transition: opacity 300ms ease-in-out;
+       }
+
+    &__uncheck {
+        opacity: 1;
+    }
+
+    &__check {
+        opacity: 0;
+        color: transparent;
+        background-clip: text;
+        background-image: $linear-gradient;
+        -webkit-background-clip: text;
+    }
+
+    &:hover {
+        .heart__uncheck {
+            opacity: 0;
+        }
+
+        .heart__check {
+            opacity: 1;
+        }
+    }
+ }
+
+ .heart {
+    font-size: 22px;
+    position: relative;
+
+    
+
+    &__unchecked,
+    &__checked {
+        position: absolute;
+        right: 16px;
+        bottom: 17px;
+        transform: translate(-50%, -50%);
+        transition: opacity 300ms ease-in-out;
+
+        
+    }
+
+    &__unchecked {
+        opacity: 1;
+    }
+
+    &__checked {
+        opacity: 0;
+        color: transparent;
+        background-clip: text;
+        background-image: $linear-gradient;
+        -webkit-background-clip: text;
+    }
+
+    &:hover {
+        .heart__unchecked {
+            opacity: 0;
+        }
+
+        .heart__checked {
+            opacity: 1;
+        }
+    }
+ }
+    

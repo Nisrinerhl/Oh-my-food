@@ -1,0 +1,85 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+@use "../utils/keyframes" as *;
+
+#main-container {
+    width: 100%;
+    min-width: 320px;
+    animation: showHome 2.5s ease-in-out both;
+}
+
+.principal__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #F6F6F6;
+    padding: 50px 0px;
+    width: 100%;
+
+    & p {
+        font-size: 18px;
+        font-weight: 300;
+        margin-top: 2px;
+        width: 350px;
+
+        @include breakpoint(desktop){
+        width: 100%;
+        }
+        
+    }
+}
+
+.option__section {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 25px;
+    
+
+    &--list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &--button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+        
+
+        @include breakpoint(desktop) {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+    }
+
+    & p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        padding: 28px 38px 28px 33px;
+        background-color: #F6F6F6;
+        font-size: 16px;
+        gap: 25px;
+
+    }
+
+    
+}    
+
+i {
+    color: #7e7e7e;
+
+    &.purpleicon {
+        color: #9356dc;
+    }
+}
+
+
+

@@ -1,0 +1,106 @@
+@use "../utils/variables" as *;
+@use "../utils/keyframes" as *;
+@use "../utils/mixins" as *;
+
+.plates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+
+    &__card {
+        background-color: white;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        border-radius: 15px;
+        height: 60px;
+        overflow: hidden;
+
+        &--contain {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 15px;
+            margin-right: auto;
+            height: 100%;
+            gap: 5px;
+            overflow: hidden;
+            white-space: nowrap;
+            transition: all 0.5s ease-in-out;
+
+            & h3 {
+                font-size: 16px;
+                font-weight: bold;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin: 0;
+            }
+
+            & p {
+                font-size: 14px;
+                font-weight: 300;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin: 0;
+            }
+        }
+
+        &--price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-weight: bold;
+            transform: translateX(45px);
+            transition: all 0.5s ease-in-out;
+
+            & p {
+                padding-top: 25px;
+                margin-right: 10px;
+                font-weight: bold;
+                font-size: 16px;
+                
+            }
+
+            &-check {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 50px;
+                border-radius: 0px 15px 15px 0px;
+
+                & i {
+                    color: white;
+                    font-size: 15px;
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+
+        }
+
+        &:hover {
+            .plates__card--price p {
+                transform: translateX(-5px);
+            }
+
+            .plates__card--contain {
+                transform: translateX(-8px);
+            }
+
+            .plates__card--price {
+                transform: translateX(0px);
+            }
+
+            .plates__card--price-check {
+                background-color: $water-green;
+                transform: translateX(0px);
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@use "../utils/mixins" as *;
+
+.new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    background-color: #99E2D0;
+    color: #008766;
+    width: 80px;
+    height: 29px;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+
+    @include breakpoint(desktop) {
+        position: absolute;
+        right: 15px;
+    }
+}
