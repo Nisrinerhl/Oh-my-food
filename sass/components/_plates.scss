@@ -23,13 +23,12 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-left: 15px;
-            margin-right: auto;
+            padding-left: 10px;
+            width: 100%;
             height: 100%;
             gap: 5px;
-            overflow: hidden;
             white-space: nowrap;
-            transition: all 0.5s ease-in-out;
+            overflow: hidden;
 
             & h3 {
                 font-size: 16px;
@@ -50,30 +49,31 @@
             }
         }
 
+        &--prix {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 10px;
+            margin-left: 2px;
+            padding-top: 25px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
         &--price {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
-            font-weight: bold;
-            transform: translateX(45px);
-            transition: all 0.5s ease-in-out;
 
-            & p {
-                padding-top: 25px;
-                margin-right: 10px;
-                font-weight: bold;
-                font-size: 16px;
-                
-            }
 
             &-check {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 100%;
-                width: 50px;
                 border-radius: 0px 15px 15px 0px;
+                transform: translateX(15px);
+                transition: all 0.5s ease-in-out;
 
                 & i {
                     color: white;
@@ -85,12 +85,9 @@
         }
 
         &:hover {
-            .plates__card--price p {
-                transform: translateX(-5px);
-            }
-
             .plates__card--contain {
-                transform: translateX(-8px);
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             .plates__card--price {
@@ -100,7 +97,10 @@
             .plates__card--price-check {
                 background-color: $water-green;
                 transform: translateX(0px);
+                margin-left: 8px;
+                width: 50px;
             }
         }
     }
+
 }
